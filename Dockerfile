@@ -3,7 +3,7 @@ FROM debian:9.2
 LABEL maintainer "opsxcq@strm.sh"
 
  
-RUN apt-get upgrade -y && \
+RUN apt-get install -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     debconf-utils && \
     echo mariadb-server mysql-server/root_password password vulnerables | debconf-set-selections && \
