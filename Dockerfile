@@ -19,7 +19,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 ADD https://archive.apache.org/dist/logging/log4j/2.14.0/apache-log4j-2.14.0-bin.tar.gz /root
-RUN tar xzvf /root/apache-log4j-2.14.0-bin.tar.gz
+RUN tar xzvf /root/apache-log4j-2.18.0-bin.tar.gz
 
 COPY php.ini /etc/php5/apache2/php.ini
 COPY dvwa /var/www/html
